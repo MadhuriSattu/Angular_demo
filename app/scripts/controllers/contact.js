@@ -1,13 +1,16 @@
-define([
-    'angular',
-], function(angular) {
+define(['angular'], function (angular) {
     'use strict';
-    angular.module('angularDemoApp.controllers.ContactCtrl',[])
-    .controller('ContactCtrl',function(){
-        this.awesomeThings = [
-            'HTML5 Boilerplate',
-            'AngularJS',
-            'Karma'
-          ];
-    });
-});
+  
+    /**
+     * @ngdoc function
+     * @name angularDemoApp.controller:ContactCtrl
+     * @description
+     * # ContactCtrl
+     * Controller of the angularDemoApp
+     */
+    angular.module('angularDemoApp.controllers.ContactCtrl', [])
+      .controller('ContactCtrl',['$scope',function($scope){
+          $scope.myText="hello";
+      }]);
+  });
+  
