@@ -16,4 +16,63 @@
         <td>{{item.name}}</td>
         <td>{{item.id}}</td>
     </tr>
-</table>
+</table><br/>
+<button id="btnId" type="submit" ng-click="counterFunction()">Counter</button>
+<p >{{count}}</p>
+<p ng-if="true" ng-show="0">Hello from true</p>
+<p ng-show="1">this is from show</p>
+<p ng-hide="name">this is from hide</p>
+<select ng-change="selectFn(selectValue)" ng-model="selectValue">
+    <option>one</option>
+    <option>one2</option>
+    <option>one23</option>
+    <option>one234</option>
+</select>
+<p>Your selected value is {{selectValue}}</p>
+
+
+<form name="formOne" ng-submit="submitFn(textData)">
+    <input type="text" ng-model="textData"/>
+    <button type="submit">submit</button>
+</form>
+
+<p>{{textData | uppercase}}</p>
+<p>{{textData | uppercase}}</p>
+
+<input type="text" ng-model="searchName"/>
+<table class="table">
+        <tr ng-repeat="emp in Employee | filter:searchName">
+            <td>{{emp.name | uppercase}}</td>
+            <td>{{emp.age }}</td>
+            <td>{{emp.dob | date:'yyyy-mm-dd' }}</td>
+            <td>{{emp.salary | currency:$:1}}</td>
+        </tr>
+</table><br/>
+
+<br/>
+<br/>
+<button type="submit" ng-click="apiCallFn()">Api call</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
